@@ -1,25 +1,29 @@
-Bonafide:
-	|
-	|- Student Library ID:
-	|	|
-	|	|- Name:
-	|	|- YoS:
-	|	|- Father/Gaurdian Name:
-	|	|- Dept:
-	|	|- Date:
-	|	|- Purpose:
-	|	|- Gender:
-	|	|- Status:
-	|
-	|- Users:
-	|	|
-	|	|- Technicians:
+
+Database Structure:
+
+	Bonafide:
+		|
+		|- Student Library ID:
 		|	|
-		|	|- Prabhu
-		|	|- Jerald
-		|- HoD	
+		|	|- Name:
+		|	|- YoS:
+		|	|- Father/Gaurdian Name:
+		|	|- Dept:
+		|	|- Date:
+		|	|- Purpose:
+		|	|- Gender:
+		|	|- Status:
+		|
+		|- Users:
 		|	|
-			|- Vincent
+		|	|- Technicians:
+			|	|
+			|	|- Prabhu
+			|	|- Jerald
+			|
+			|- HoD	
+			|	|
+				|- Vincent
 
 
 
