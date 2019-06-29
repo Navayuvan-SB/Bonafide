@@ -47,10 +47,10 @@ body{
 	background-color: #2ecc71;
 	color: #000;
 }
-.request-form input[type="radio"]{
+#rb{
 	font-size: 20px;
 	color: #fff;
-	
+	font-weight: 900;
 }
 
 
