@@ -1,0 +1,85 @@
+body{
+	text-align: center;
+	background-image: linear-gradient(rgba( 0, 0, 50, 0.5),rgba( 0, 0, 50, 0.5)),url(r1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: sans-serif;
+}
+.request{
+	margin-top: 50px;
+	color: #fff;
+	text-transform: uppercase;
+	transition: all 5s ease-in-out;
+}
+.request h1{
+	font-size: 50px;
+	line-height: 20px;
+}
+.form{
+	margin-top: 50px;
+	transition: all 5s ease-in-out;
+}
+.request-form input[type="text"],input[type="date"]{
+	width: 600px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 5px solid #87d37c;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 18px;
+}
+.request-form input[type="submit"]{
+	border: none;
+	outline: none;
+	width: 100px;
+	height: 50px;
+	background-color: #00b5cc;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.request-form input[type="submit"]:hover{
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: #000;
+}
+.request-form input[type="radio"]{
+	font-size: 20px;
+	color: #fff;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
