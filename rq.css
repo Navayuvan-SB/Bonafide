@@ -11,11 +11,18 @@ body{
 	margin-top: 50px;
 	color: #fff;
 	text-transform: uppercase;
+<<<<<<< HEAD
 	transition: all 3s ease-in-out;
 }
 .request h1{
 	font-size: 50px;
 	line-height: 10px;
+=======
+	transition: all 5s ease-in-out;
+}
+.request h1{
+	font-size: 50px;
+	line-height: 20px;
 }
 .form{
 	margin-top: 50px;
