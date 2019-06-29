@@ -59,9 +59,40 @@ body{
 	color: #fff;
 	font-weight: 900;
 }
-
-
-
+#year{
+	width: 600px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 5px solid #87d37c;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 18px;
+}
+#dept{
+	width: 600px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 5px solid #87d37c;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 18px;
+}
+#reas{
+	width: 600px;
+	height: 50px;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 5px solid #87d37c;
+	color: #fff;
+	font-size: 20px;
+	margin-bottom: 18px;
+	
+}
 
 
 
