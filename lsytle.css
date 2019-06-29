@@ -1,0 +1,101 @@
+body{
+	background-image: linear-gradient(rgba( 0, 0, 50, 0.5),rgba( 0, 0, 50, 0.5)),url(psnahome.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: sans-serif;
+}
+.login-box{
+	color: #fff;
+	position: absolute;
+	top: calc(50% - 225px);
+	left: calc(50% - 175px);
+	transition: translate(calc(50% - 225px),calc(50% - 175px));
+	background: rgba(0,0,0,0.5);
+	width: 350px;
+	height: 450px;
+	box-sizing: border-box;
+	border-radius: 10%;
+	padding: 70px 30px;
+}
+.logo{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -10%;
+	left: calc(50% - 50px);
+}
+.login-box h1{
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 30px;
+}
+.login-box input{
+	width: 100%;
+	margin-bottom: 30px;
+}
+.login-box input[type="text"] , [type="password"]{
+	border: none;
+	border-bottom: 5px solid #87d37c;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 20px;
+}
+.login-box input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 50px;
+	background-color: #00b5cc;
+	color: #fff;
+	font-size: 20px;
+	border-radius: 10px;
+}
+.login-box input[type="submit"]:hover{
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
