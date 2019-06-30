@@ -3,6 +3,12 @@
 <head>
 	<title>Student Detail</title>
 	<link rel="stylesheet" type="text/css" href="rq.css">
+	<script type="text/javascript">
+		function showfield(name){
+		  if(name=='Other')document.getElementById('otherOption').innerHTML='<input type="text" name="other" placeholder="Reason"/>';
+		  else document.getElementById('otherOption').innerHTML='';
+		}
+	</script>
 </head>
 <body>
 	<div class="request">
@@ -12,9 +18,34 @@
 		<form id="RF" method="post" action="">
 			<input type="text" name="sname" class="det" placeholder="Student Name"><br><br>
 			<input type="text" name="fname" class="det" placeholder="Father Name"><br><br>
-			<select id="year"><option>Year</option><option>I Year</option><option>II Year</option><option>III Year</option><option>IV Year</option></select><br><br>
-			<select id="dept"><option>Department</option><option>B.Tech Information Technology</option><option>B.E Civil Engineering</option><option>B.E Computer Science Engineering</option><option>B.E Electrical & Electronics Engineering</option><option>B.E Electronics & Communication Engineering</option><option>B.E Mechanical Engineering</option></select><br><br>
-			<select id="reas"><option>Reason</option><option>Passport</option><option>Educational Loan</option><option>Bank Account</option><option>Symposium/Internship/Workshop</option></select><br><br>
+			<select id="year">
+				<option>Year</option>
+				<option>I Year</option>
+				<option>II Year</option>
+				<option>III Year</option>
+				<option>IV Year</option>
+			</select><br><br>
+			<select id="dept">
+				<option>Department</option>
+				<option>B.Tech Information Technology</option>
+				<option>B.E Civil Engineering</option>
+				<option>B.E Computer Science Engineering</option>
+				<option>B.E Electrical & Electronics Engineering</option>
+				<option>B.E Electronics & Communication Engineering</option>'
+				<option>B.E Mechanical Engineering</option>
+			</select>
+			<br><br>
+			<select id="reas" onchange="showfield(this.options[this.selectedIndex].value)">
+				<option>Reason</option>
+				<option>Passport</option>
+				<option>Educational Loan</option>
+				<option>Bank Account</option>
+				<option>Symposium/Internship/Workshop</option>
+				<option>Other</option>
+			</select>
+			<div id="otherOption">
+				
+			</div><br><br>
 			<input type="date" name="date" class="det" placeholder="Date"><br><br>
 			<input type="radio" name="gender" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="radio" name="gender" value="Male"><span id="rb">Female</span><br><br>
