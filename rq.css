@@ -25,12 +25,12 @@ body{
 	line-height: 20px;
 }
 .form{
-	margin-top: 50px;
+	margin-top: 70px;
 	transition: all 5s ease-in-out;
 }
 .request-form input[type="text"],input[type="date"]{
 	width: 600px;
-	height: 50px;
+	height: 30px;
 	background: transparent;
 	border: none;
 	outline: none;
@@ -70,6 +70,10 @@ body{
 	font-size: 20px;
 	margin-bottom: 18px;
 }
+.specialColor { 
+    /* Whatever color  you want */
+    color: #000;
+}
 #dept{
 	width: 600px;
 	height: 50px;
@@ -93,7 +97,9 @@ body{
 	margin-bottom: 18px;
 	
 }
-
+#gr{
+	color: blue;
+}
 
 
 

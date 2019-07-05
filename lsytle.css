@@ -9,18 +9,12 @@ body{
 .login-box{
 	color: #fff;
 	position: absolute;
-<<<<<<< HEAD
 	top: calc(50% - 225px);
 	left: calc(50% - 175px);
 	transition: translate(calc(50% - 225px),calc(50% - 175px));
-=======
-	top: 30%;
-	left: 42%;
-	transition: translate(-70%,-58%);
->>>>>>> 16ae21bae7758e9062a917198f0f750bf5668066
 	background: rgba(0,0,0,0.5);
-	width: 350px;
-	height: 450px;
+	max-width: 350px;
+	max-height: 450px;
 	box-sizing: border-box;
 	border-radius: 10%;
 	padding: 70px 30px;

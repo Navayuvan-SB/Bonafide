@@ -18,36 +18,36 @@
 		<form id="RF" method="post" action="">
 			<input type="text" name="sname" class="det" placeholder="Student Name"><br><br>
 			<input type="text" name="fname" class="det" placeholder="Father Name"><br><br>
-			<select id="year">
-				<option>Year</option>
-				<option>I Year</option>
-				<option>II Year</option>
-				<option>III Year</option>
-				<option>IV Year</option>
+			<input type="text" name="regis" class="det" placeholder="Register Number"><br><br>
+			<select id="year" class="specialColor">
+				<option class="specialColor">Year</option>
+				<option class="specialColor">I Year</option>
+				<option class="specialColor">II Year</option>
+				<option class="specialColor">III Year</option>
+				<option class="specialColor">IV Year</option>
 			</select><br><br>
-			<select id="dept">
-				<option>Department</option>
-				<option>B.Tech Information Technology</option>
-				<option>B.E Civil Engineering</option>
-				<option>B.E Computer Science Engineering</option>
-				<option>B.E Electrical & Electronics Engineering</option>
-				<option>B.E Electronics & Communication Engineering</option>'
-				<option>B.E Mechanical Engineering</option>
+			<select id="dept" class="specialColor">
+				<option class="specialColor">Department</option>
+				<option class="specialColor">B.Tech Information Technology</option>
+				<option class="specialColor">B.E Civil Engineering</option>
+				<option class="specialColor">B.E Computer Science Engineering</option>
+				<option class="specialColor">B.E Electrical & Electronics Engineering</option>
+				<option class="specialColor">B.E Electronics & Communication Engineering</option>'
+				<option class="specialColor">B.E Mechanical Engineering</option>
 			</select>
 			<br><br>
-			<select id="reas" onchange="showfield(this.options[this.selectedIndex].value)">
-				<option>Reason</option>
-				<option>Passport</option>
-				<option>Educational Loan</option>
-				<option>Bank Account</option>
-				<option>Symposium/Internship/Workshop</option>
-				<option>Other</option>
+			<select id="reas" onchange="showfield(this.options[this.selectedIndex].value)" class="specialColor">
+				<option class="specialColor">Reason</option>
+				<option class="specialColor">Passport</option>
+				<option class="specialColor">Educational Loan</option>
+				<option class="specialColor">Bank Account</option>
+				<option class="specialColor">Symposium/Internship/Workshop</option>
+				<option class="specialColor">Other</option>
 			</select>
 			<div id="otherOption">
 				
 			</div><br><br>
-			<input type="date" name="date" class="det" placeholder="Date"><br><br>
-			<input type="radio" name="gender" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" id="gr" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="radio" name="gender" value="Male"><span id="rb">Female</span><br><br>
 			<input type="submit" name="send" class="but" value="Send">
 		</form>
