@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>bonafide_page</title>
+	<link rel="stylesheet" type="text/css" href="bstyle.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">PSNA</a>
+  <div class="menu_toggle"></div>
+    <nav>
+      <ul>
+        <li><a href="#" class="current">Request</a></li>
+        <li><a href="#">Sign out</a></li>
+      </ul>
+    </nav>
+    <div class="clearfix"></div>
+</header>
+	
+  <div class="row">
+    <div class="column" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+      <div class="card">
+        <h1>Student One</h1>
+        <p>Name : <br><br>Reason : <br><br>Staff : <br><br>Date : <br><br></p>
+      </div>
+    </div>
+
+    <div class="column" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">
+      <div class="card">
+        <h1>Student Two</h1>
+        <p>Name : <br><br>Reason : <br><br>Staff : <br><br>Date : <br><br></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="id01" class="modal">  
+    <form class="modal-content animate" action="/action_page.php">
+      <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+
+        <div class="container">
+          <div class="tit"><h1>Student One</h1></div>
+            <input type="text" name="sname" class="det" placeholder="Student Name"><br><br>
+            <input type="text" name="fname" class="det" placeholder="Father Name"><br><br>
+            <input type="text" name="regis" class="det" placeholder="Register Number"><br><br>
+            <input type="text" name="reason" class="det" placeholder="Reason"><br><br>
+            <input type="text" name="year" class="det" placeholder="Year"><br><br>
+            <input type="text" name="date" class="det" placeholder="Date"><br><br>
+            <input type="text" name="tname" class="det" placeholder="Staff"><br><br>  
+            <input type="submit" name="send" class="but" value="Accept">
+      </div>
+    </form>
+  </div>
+
+  <div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <div class="tit"><h1>Student Two</h1></div>
+        <input type="text" name="sname" class="det" placeholder="Student Name"><br><br>
+        <input type="text" name="fname" class="det" placeholder="Father Name"><br><br>
+        <input type="text" name="regis" class="det" placeholder="Register Number"><br><br>
+        <input type="text" name="reason" class="det" placeholder="Reason"><br><br>
+        <input type="text" name="year" class="det" placeholder="Year"><br><br>
+        <input type="text" name="date" class="det" placeholder="Date"><br><br>
+        <input type="text" name="tname" class="det" placeholder="Staff"><br><br>  
+        <input type="submit" name="send" class="but" value="Accept">
+    </div>
+  </form>
+</div>
+
+<footer>
+		
+</footer>
+
+<script>
+
+var modal = document.getElementById('id01'),document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>
