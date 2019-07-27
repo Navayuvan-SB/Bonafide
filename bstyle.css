@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-image: url(bk.jpg);
+  background-color: white;
   background-size: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -24,7 +24,7 @@ header{
 
 .footer_main{
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   width: 100%;
   height: auto;
   margin: auto;
@@ -51,9 +51,10 @@ header{
 
 .footer_item ul li a{
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
+
 }
 
 /*.footer_bottom{
@@ -79,8 +80,8 @@ header{
   font-size: 20px;
   text-align: center;
   color: #fff;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 100;
+  letter-spacing: 2px;
 }
 
 .footer_item p a{
@@ -144,7 +145,7 @@ nav ul li a:hover{
 }
 
 .row {
-  margin: 0 -5px;
+  margin: 110px 90px;
 }
 
 .row:after {
