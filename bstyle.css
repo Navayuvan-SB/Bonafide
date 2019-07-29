@@ -5,15 +5,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*header{
-  position: relative;
-  max-width: calc(100% - 60px);
-  margin: 20px auto;
-  padding: 5px;
-  background: #2e3131;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-}*/
 header{
   width: 100%;
   height: auto;
@@ -46,7 +37,7 @@ header{
 
 .footer_item ul li{
   display: inline-block;
-  margin: 10px 70px;
+  margin: 10px 200px;
 }
 
 .footer_item ul li a{
@@ -56,18 +47,6 @@ header{
   text-decoration: none;
 
 }
-
-/*.footer_bottom{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  margin: auto;
-  background: #32CD32;
-  padding: 1px 0px;
-}<div class="footer_bottom">
-  <p>Designed by: CyoherSource</p>
-</div>*/
 
 .footer_item p{
   position: absolute;

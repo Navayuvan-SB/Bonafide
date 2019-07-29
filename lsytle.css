@@ -61,6 +61,25 @@ body{
 	color: #000;
 }
 
+.footer_com p{
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+  height: auto;
+  margin: auto;
+  /*0background: #32CD32;*/
+  padding: 1px 0px;
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+  font-weight: 75;
+  letter-spacing: 2px;
+}
+
+.footer_com p a{
+  color: #fff;
+}
+
 
 
 
