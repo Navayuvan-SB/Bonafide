@@ -37,7 +37,7 @@ body{
 	width: 100%;
 	margin-bottom: 30px;
 }
-.login-box input[type="text"] , [type="password"]{
+.login-box input[type="email"] , [type="password"]{
 	border: none;
 	border-bottom: 5px solid #87d37c;
 	background: transparent;

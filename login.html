@@ -9,9 +9,9 @@
 		<img src="images.png" class="logo">
 		<h1>LOGIN</h1>
 		<form>
-			<input type="text" name="uname" placeholder="User Name"><br><br><br>
-			<input type="password" name="pass" placeholder="Password"><br><br><br>
-			<input type="submit" name="submit" value="LOGIN">
+			<input type="email" name="uname" placeholder="Email" id="Email_field"><br><br><br>
+			<input type="password" name="pass" placeholder="Password" id="Password_field"><br><br><br>
+			<input type="submit" name="submit" value="LOGIN" onclick="login()">
 		</form>
 	</div>
 
@@ -20,6 +20,25 @@
   			<p>Designed by: CyoherSource</p>
 		</div>
 	</footer>
+
+	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+	<script>
+
+  		var firebaseConfig = {
+	    apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
+	    authDomain: "bonafidesystem-35792.firebaseapp.com",
+	    databaseURL: "https://bonafidesystem-35792.firebaseio.com",
+	    projectId: "bonafidesystem-35792",
+	    storageBucket: "",
+	    messagingSenderId: "779129394602",
+	    appId: "1:779129394602:web:e6839d55cf124f02"
+ 		 };
+
+ 		 firebase.initializeApp(firebaseConfig);
+	</script>
+	<script src="login.js"></script>
+
 
 </body>
 </html>
