@@ -5,14 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="lsytle.css">
 </head>
 <body>
-	<div class="login-box">
+	<div id="login_box" class="login-box">
 		<img src="images.png" class="logo">
 		<h1>LOGIN</h1>
-		<form>
-			<input type="email" name="uname" placeholder="Email" id="Email_field"><br><br><br>
-			<input type="password" name="pass" placeholder="Password" id="Password_field"><br><br><br>
-			<input type="submit" name="submit" value="LOGIN" onclick="login()">
-		</form>
+		<input type="email" placeholder="Email" id="emailfield" /><br><br><br>
+		<input type="password" placeholder="Password" id="passwordfield" /><br><br><br>
+		<button type="submit" onclick="return login()">LOGIN</button>
 	</div>
 
 	<footer>
@@ -21,23 +19,65 @@
 		</div>
 	</footer>
 
-	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+	
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
 
-	<script>
 
-  		var firebaseConfig = {
-  		apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
-  		authDomain: "bonafidesystem-35792.firebaseapp.com",
-	  	databaseURL: "https://project-id.firebaseio.com",
-  		projectId: "bonafidesystem-35792",
-  		storageBucket: "bonafidesystem-35792.appspot.com",
-  		messagingSenderId: "sender-id",
-  		appID: "1:779129394602:web:e6839d55cf124f02",
-		};
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
 
- 		 firebase.initializeApp(firebaseConfig);
-	</script>
-	<script src="login.js"></script>
+<!-- <script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
+    authDomain: "bonafidesystem-35792.firebaseapp.com",
+    databaseURL: "https://bonafidesystem-35792.firebaseio.com",
+    projectId: "bonafidesystem-35792",
+    storageBucket: "",
+    messagingSenderId: "779129394602",
+    appId: "1:779129394602:web:e6839d55cf124f02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+ -->
+<script>
+	var firebaseConfig = {
+    apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
+    authDomain: "bonafidesystem-35792.firebaseapp.com",
+    databaseURL: "https://bonafidesystem-35792.firebaseio.com",
+    projectId: "bonafidesystem-35792",
+    storageBucket: "",
+    messagingSenderId: "779129394602",
+    appId: "1:779129394602:web:e6839d55cf124f02"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+	function login(){
+	// body...
+
+	
+	console.log(firebase.auth)
+
+	var email = document.getElementById("emailfield");
+	var password = document.getElementById("passwordfield");
+	// window.alert(email.value);
+	// console.log(email);
+	firebase.auth().signInWithEmailAndPassword(email.value, password.value).catch(function(error) {
+  // Handle Errors here.
+	  var errorCode = error.code;
+	  var errorMessage = error.message;
+	  window.alert(errorMessage);
+	  // ...
+	});
+	/*firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+		.catch(function (err){
+			window.alert("failed");
+		});*/
+}
+</script>
 
 
 </body>

@@ -33,7 +33,7 @@ body{
 	text-align: center;
 	font-size: 30px;
 }
-.login-box input{
+.login-box input , button{
 	width: 100%;
 	margin-bottom: 30px;
 }
@@ -46,18 +46,18 @@ body{
 	color: #fff;
 	font-size: 20px;
 }
-.login-box input[type="submit"]{
+.login-box button[type="submit"]{
 	border: none;
 	outline: none;
 	height: 50px;
 	background-color: #00b5cc;
 	color: #fff;
-	font-size: 20px;
-	border-radius: 10px;
+	font-size: 25px;
+	border-radius: 20px;
 }
-.login-box input[type="submit"]:hover{
+.login-box button[type="submit"]:hover{
 	cursor: pointer;
-	background-color: #2ecc71;
+	background-color: #7befb2;
 	color: #000;
 }
 
