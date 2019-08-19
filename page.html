@@ -3,15 +3,14 @@
 <head>
 	<title>Student Detail</title>
 	<link rel="stylesheet" type="text/css" href="css/rq.css">.
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript">
 		function showfield(name){
 		  if(name=='Other')document.getElementById('otherOption').innerHTML='<input type="text" name="other" placeholder="Reason"/>';
 		  else document.getElementById('otherOption').innerHTML='';
 			}
-			
-	    document.getElementById("success").style.visibility = "hidden";
-	</script>
+   	</script>
 </head>
 <body>
 	<div id="success">
@@ -53,18 +52,19 @@
 				</div><br><br>
 				<input type="radio" name="gender" id="gr" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 				<input type="radio" name="gender" value="Male"><span id="rb">Female</span><br><br>
-				<input type="submit" name="send" class="but" value="Send">
+				<button type="submit" >Download</button>
 			</form>
 		</div>
 	</div>
 
-	<div id="unsucces">
+	<div id="unsuccess">
+		<p id="error">404 Error</p>
 		
 	</div>
 
 
 	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-
+	<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
 	<script>
 
   		var firebaseConfig = {
@@ -80,7 +80,18 @@
  		 firebase.initializeApp(firebaseConfig);
 	</script>
 
-	<script src="Register.js"></script>
+	<script>
+		var uid = document.cookie.spilt("=");
+		console.log(uid);
+		if (uid != ""){
+			document.getElementById("success").style.visibility = "block";	
+			document.getElementById("unsuccess").style.visibility = "none";	
+		}else{
+			document.getElementById("success").style.visibility = "none";	
+			document.getElementById("unsuccess").style.visibility = "block";
+		}
+		
+	</script>
 
 </body>
 </html>

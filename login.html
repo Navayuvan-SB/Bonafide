@@ -25,6 +25,7 @@
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
 <script>
+	document.cookie = uid + "=" + (uid || "");
 	var firebaseConfig = {
     apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
     authDomain: "bonafidesystem-35792.firebaseapp.com",
@@ -50,9 +51,10 @@
 	    		var uid = login.uid;
 	    		// var providerData = user.providerData;
 	    		// console.log(uid);
-	    		localStorage.setItem("uid", uid);
+	    		document.cookie = uid + "=" + (uid || "");
 	  		} else {
 
+	  			document.cookie = uid + "=" + (uid || "");
 	  			window.alert("Not logged In");
 	    		// User is signed out.
 	  		}
@@ -70,6 +72,7 @@
 		})
 		.catch(function(error) {
 	  	// Handle Errors here.
+	  	document.cookie = uid + "=" + (uid || "");
 		  window.alert("User Id or Password is wrong");
 		  // ...
 		});
