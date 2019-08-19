@@ -24,26 +24,6 @@
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
-
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#config-web-app -->
-
-<!-- <script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
-    authDomain: "bonafidesystem-35792.firebaseapp.com",
-    databaseURL: "https://bonafidesystem-35792.firebaseio.com",
-    projectId: "bonafidesystem-35792",
-    storageBucket: "",
-    messagingSenderId: "779129394602",
-    appId: "1:779129394602:web:e6839d55cf124f02"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
- -->
 <script>
 	var firebaseConfig = {
     apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
@@ -56,28 +36,45 @@
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-	function login(){
-	// body...
 
-	
-	console.log(firebase.auth)
+  function setUID(){
+  	// console.log("Logged In");
+  	firebase.auth().onAuthStateChanged(function(login) {
+  			if (login) {
+			    // User is signed in.
+			    // var displayName = user.displayName;
+			    // var email = user.email;
+			    // var emailVerified = user.emailVerified;
+			    // var photoURL = user.photoURL;
+			    // var isAnonymous = user.isAnonymous;
+	    		var uid = login.uid;
+	    		// var providerData = user.providerData;
+	    		// console.log(uid);
+	    		localStorage.setItem("uid", uid);
+	  		} else {
 
-	var email = document.getElementById("emailfield");
-	var password = document.getElementById("passwordfield");
-	// window.alert(email.value);
-	// console.log(email);
-	firebase.auth().signInWithEmailAndPassword(email.value, password.value).catch(function(error) {
-  // Handle Errors here.
-	  var errorCode = error.code;
-	  var errorMessage = error.message;
-	  window.alert(errorMessage);
-	  // ...
+	  			window.alert("Not logged In");
+	    		// User is signed out.
+	  		}
 	});
-	/*firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
-		.catch(function (err){
-			window.alert("failed");
-		});*/
-}
+  }
+
+  function login(){
+		var email = document.getElementById("emailfield");
+		var password = document.getElementById("passwordfield");
+		firebase.auth().signInWithEmailAndPassword(email.value, password.value).then(function(user){
+			setUID();
+			window.location.href = "page.html";
+			// console.log("asdsad");
+
+		})
+		.catch(function(error) {
+	  	// Handle Errors here.
+		  window.alert("User Id or Password is wrong");
+		  // ...
+		});
+
+  }
 </script>
 </body>
 </html>

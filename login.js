@@ -1,4 +1,4 @@
-<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
