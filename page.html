@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html >
 <head>
 	<title>Student Detail</title>
@@ -13,85 +13,105 @@
    	</script>
 </head>
 <body>
-	<div id="success">
-		<div id="request_page" class="request">
-			<h1>Student Detail</h1>
-		</div>
-		<div class="request-form">
-			<form id="RF" method="post" action="">
-				<input type="text" name="sname" class="det" placeholder="Student Name"><br><br>
-				<input type="text" name="fname" class="det" placeholder="Father Name"><br><br>
-				<input type="text" name="regis" class="det" placeholder="Register Number"><br><br>
-				<select id="year" class="specialColor">
-					<option class="specialColor">Year</option>
-					<option class="specialColor">I Year</option>
-					<option class="specialColor">II Year</option>
-					<option class="specialColor">III Year</option>
-					<option class="specialColor">IV Year</option>
-				</select><br><br>
-				<select id="dept" class="specialColor">
-					<option class="specialColor">Department</option>
-					<option class="specialColor">B.Tech Information Technology</option>
-					<option class="specialColor">B.E Civil Engineering</option>
-					<option class="specialColor">B.E Computer Science Engineering</option>
-					<option class="specialColor">B.E Electrical & Electronics Engineering</option>
-					<option class="specialColor">B.E Electronics & Communication Engineering</option>'
-					<option class="specialColor">B.E Mechanical Engineering</option>
-				</select>
-				<br><br>
-				<select id="reas" onchange="showfield(this.options[this.selectedIndex].value)" class="specialColor">
-					<option class="specialColor">Reason</option>
-					<option class="specialColor">Passport</option>
-					<option class="specialColor">Educational Loan</option>
-					<option class="specialColor">Bank Account</option>
-					<option class="specialColor">Symposium/Internship/Workshop</option>
-					<option class="specialColor">Other</option>
-				</select>
-				<div id="otherOption">
-					
-				</div><br><br>
-				<input type="radio" name="gender" id="gr" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-				<input type="radio" name="gender" value="Male"><span id="rb">Female</span><br><br>
-				<button type="submit" >Download</button>
-			</form>
-		</div>
+	<div id="success" class="request-form">
+		<form id="studentDetail">
+			<h1 class="request">Student Detail</h1>
+			<input type="text" id="sname" class="det" placeholder="Student Name"><br><br>
+			<input type="text" id="fname" class="det" placeholder="Father Name"><br><br>
+			<input type="text" id="regisNo" class="det" placeholder="Register Number"><br><br>
+			<select id="year" class="specialColor">
+				<option class="specialColor">Year</option>
+				<option class="specialColor">I Year</option>
+				<option class="specialColor">II Year</option>
+				<option class="specialColor">III Year</option>
+				<option class="specialColor">IV Year</option>
+			</select><br><br>
+			<select id="deptStu" class="specialColor">
+				<option class="specialColor">Department</option>
+				<option class="specialColor">B.Tech Information Technology</option>
+				<option class="specialColor">B.E Civil Engineering</option>
+				<option class="specialColor">B.E Computer Science Engineering</option>
+				<option class="specialColor">B.E Electrical & Electronics Engineering</option>
+				<option class="specialColor">B.E Electronics & Communication Engineering</option>'
+				<option class="specialColor">B.E Mechanical Engineering</option>
+			</select>
+			<br><br>
+			<select id="reas" onchange="showfield(this.options[this.selectedIndex].value)" class="specialColor">
+				<option class="specialColor">Reason</option>
+				<option class="specialColor">Passport</option>
+				<option class="specialColor">Educational Loan</option>
+				<option class="specialColor">Bank Account</option>
+				<option class="specialColor">Symposium/Internship/Workshop</option>
+				<option class="specialColor">Other</option>
+			</select>
+			<div id="otherOption">
+			</div><br><br>
+			<div id="gr">
+			<input type="radio" name="gender" value="Male"><span id="rb">Male</span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			<input type="radio" name="gender" value="Male"><span id="rb">Female</span><br><br>
+			</div>
+			<input type="submit" value="send">
+		</form>
 	</div>
 
 	<div id="unsuccess">
 		<p id="error">404 Error</p>
-		
 	</div>
 
-
-	<script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
-	<script>
-
-  		var firebaseConfig = {
-  		apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
-  		authDomain: "bonafidesystem-35792.firebaseapp.com",
-	  	databaseURL: "https://project-id.firebaseio.com",
-  		projectId: "bonafidesystem-35792",
-  		storageBucket: "bonafidesystem-35792.appspot.com",
-  		messagingSenderId: "sender-id",
-  		appID: "1:779129394602:web:e6839d55cf124f02",
-		};
-
- 		 firebase.initializeApp(firebaseConfig);
-	</script>
+	<script src="https://www.gstatic.com/firebasejs/6.3.5/irebase-database.js"></script>
 
 	<script>
-		var uid = document.cookie.spilt("=");
-		console.log(uid);
-		if (uid != ""){
-			document.getElementById("success").style.visibility = "block";	
-			document.getElementById("unsuccess").style.visibility = "none";	
-		}else{
-			document.getElementById("success").style.visibility = "none";	
-			document.getElementById("unsuccess").style.visibility = "block";
-		}
-		
-	</script>
+		var firebaseConfig = {
+	    apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
+	    authDomain: "bonafidesystem-35792.firebaseapp.com",
+	    databaseURL: "https://bonafidesystem-35792.firebaseio.com",
+	    projectId: "bonafidesystem-35792",
+	    storageBucket: "",
+	    messagingSenderId: "779129394602",
+	    appId: "1:779129394602:web:e6839d55cf124f02"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
 
+	  var studentRef = firebase.database().ref().child("studentForm");
+
+	  document.getElementById('studentDetail').addEventListener('click',submitForm);
+
+	  function submitForm(e){
+	  	var studentName = getInputVal('sname');
+	  	var fatherName = getInputVal('fname');
+	  	var registerNumber = getInputVal('regisNo');
+	  	var department = getInputVal('deptStu');
+	  	var year = getInputVal('year');
+	  	var reason = getInputVal('reas');
+		var gender = getInputVal('gr');	  	
+	  
+		saveForm(studentName,fatherName,registerNumber,department,year,reason,gender);
+
+		document.getElementById('studentDetail').reset();
+	  }
+
+	 function getInputVal(){
+	 	return document.getElementById(id).value;
+	 }
+
+	 function saveForm(studentName,fatherName,registerNumber,department,year,reason,gender){
+	 	
+	 	var newstudentRef = studentRef.push();
+	 	newstudentRef.set({
+
+	 		studentName : sname,
+	 		fatherName : fname,
+	 		registerNumber : regisNo,
+	 		department : deptStu,
+	 		year : year,
+	 		reason : reas,
+	 		gender : gr
+	 	
+	 	});
+	 }
+	 </script>
 </body>
 </html>

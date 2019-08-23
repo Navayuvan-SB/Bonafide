@@ -25,7 +25,6 @@
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-auth.js"></script>
 <script>
-	document.cookie = uid + "=" + (uid || "");
 	var firebaseConfig = {
     apiKey: "AIzaSyBO3gY1aCPMxnD4QcKRczQ2yJZ7AgV0I6Y",
     authDomain: "bonafidesystem-35792.firebaseapp.com",
@@ -38,6 +37,7 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
+  document.cookie = uid + "=" + (uid || "");
   function setUID(){
   	// console.log("Logged In");
   	firebase.auth().onAuthStateChanged(function(login) {
